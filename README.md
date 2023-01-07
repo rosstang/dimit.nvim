@@ -47,7 +47,7 @@ M.config = {
 - setup() can be called multiple times to change configuration,
 ```lua
 require("dimmer").setup({
-    bgcolor = "FF0000",         -- change the dim color to red
+    bgcolor = "#FF0000",         -- change the dim color to red
 })
 ```
 
