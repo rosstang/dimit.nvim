@@ -1,4 +1,4 @@
-# dimmit.nvim
+# dimit.nvim
 A neovim plugin to dim inactive windows (change their background color). 
 
 It is mainly a rewrite of jceb/blinds.nvim, which uses lua and makes configuration easier, and works with package manager.
