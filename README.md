@@ -1,17 +1,17 @@
-# dimmer.nvim
-A neovim plugin to dim inactive windows. 
+# dimmit.nvim
+A neovim plugin to dim inactive windows (change their background color). 
 
-It is mainly a rewrite of jceb/blinds.nvim, which uses lua and makes configuration easier, and work with package manager.
+It is mainly a rewrite of jceb/blinds.nvim, which uses lua and makes configuration easier, and works with package manager.
 
-![Dimmer animation](dimmer-nvim.gif)
+![Dimit animation](dimit-nvim.gif)
 
 # Installation
 - Install it with packer (or any other package manager)
 ```lua
 use {
-    "rosstang/dimmer.nvim",
+    "rosstang/dimit.nvim",
     config = function()
-        require("dimmer").setup()
+        require("dimit").setup()
     end,
 }
 ```
@@ -21,7 +21,7 @@ use {
 ```lua
 M.config = {
     bgcolor = "#303030",
-    highlight_group = "Dimmer",
+    highlight_group = "Dimit",
     auto_dim = true,
     dim_elements = {
         "ColorColumn",
@@ -46,10 +46,10 @@ M.config = {
 
 - setup() can be called multiple times to change configuration,
 ```lua
-require("dimmer").setup({
+require("dimit").setup({
     bgcolor = "#FF0000",         -- change the dim color to red
 })
 ```
 
-- In case the current windows is also dimmed (not undimmed), you can call :DimmerNow to redo the dimming.
+- In case the current windows is also dimmed (not undimmed), you can call :Dimit to redo the dimming.
 

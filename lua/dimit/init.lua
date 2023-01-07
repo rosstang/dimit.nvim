@@ -10,7 +10,7 @@ local M = {}
 
 M.config = {
     bgcolor = "#303030",
-    highlight_group = "Dimmer",
+    highlight_group = "Dimit",
     auto_dim = true,
     dim_elements = {
         "ColorColumn",
@@ -52,7 +52,7 @@ M.setup = function(opts)
     opts = opts == nil and {} or opts
     M.config = merge_tb(M.config, opts)
     M.dim_inactive()
-    vim.api.nvim_create_user_command("DimmerNow", M.dim_inactive, {})
+    vim.api.nvim_create_user_command("Dimit", M.dim_inactive, {})
     if not M.config.auto_dim then
         return
     end
