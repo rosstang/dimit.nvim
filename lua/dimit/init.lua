@@ -54,7 +54,7 @@ M.setup = function(opts)
     if M.autocmd ~= nil then
         vim.api.nvim_del_autocmd(M.autocmd)
     end
-    M.autocmd = vim.api.nvim_create_autocmd({ "WinEnter", "BufWinEnter" }, {
+    M.autocmd = vim.api.nvim_create_autocmd({ "WinEnter", "BufWinEnter", "WinClosed" }, {
         callback = function()
             M.dim_inactive()
         end,
