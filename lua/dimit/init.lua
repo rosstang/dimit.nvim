@@ -36,11 +36,6 @@ M.dim_inactive = function()
     local config = M.config
     vim.api.nvim_set_hl(0, config.highlight_group, { bg = config.bgcolor })
     local current = vim.api.nvim_get_current_win()
-    local win_cfg = vim.api.nvim_win_get_config(current)
-    if win_cfg["relative"] ~= "" then
-        -- ignore floating window
-        return
-    end
     local dim_value = get_highlight_value(config.dim_elements, config.highlight_group)
     for _, w in pairs(vim.api.nvim_list_wins()) do
         local winhighlights = current == w and "" or dim_value
