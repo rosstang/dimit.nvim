@@ -52,4 +52,4 @@ require("dimit").setup({
 ```
 
 - In case the current windows is also dimmed (not undimmed), you can call :Dimit to redo the dimming.
-
+- The gif is also using [nvim-ide](https://github.com/ldelossa/nvim-ide) for the side panels
